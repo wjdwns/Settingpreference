@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategoty android:title ="메시지 알림">
+        <SwitchPrefernce
+            android:key="message"
+            android:title="메시지 알림"/>
+        <PreferenceScreen
+            android:key="keyword_screen"
+            android:title="키워드 알림"
+            android:summaty="사용 안함">
+            
+        </PreferenceScreen>
+    </PreferenceCategoty>
+</PreferenceScreen>
