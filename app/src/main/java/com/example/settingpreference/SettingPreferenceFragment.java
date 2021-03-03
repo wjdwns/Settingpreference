@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 
 public class SettingPreferenceFragment extends PreferenceFragmentCompat {
     SharedPreferences prefs;
@@ -55,9 +56,9 @@ public class SettingPreferenceFragment extends PreferenceFragmentCompat {
     };
 
     @Override
-    public void onNavigateToScreen(android.support.v7.preference.PreferenceScreen preferenceScreen) {
-        Intent intent = new Intent(getActivity(), Lab17_2Activity.class)
-                .putExtra(Lab17_2Activity.TARGET_SETTING_PAGE, preferenceScreen.getKey());
+    public void onNavigateToScreen(PreferenceScreen preferenceScreen) {
+        super.onNavigateToScreen(preferenceScreen);
+        Intent intent = new Intent(getActivity(), MainActivity.class).putExtra("TARGET_SETTING_PAGE",preferenceScreen.getKey());
         startActivity(intent);
     }
 }
