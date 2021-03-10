@@ -9,7 +9,7 @@
             android:key="keyword_screen"
             android:title="키워드 알림"
             android:summary="사용안함">
-
+//요즘은 preference를 안쓰는건가?
             <SwitchPreference
                 android:defaultValue="false"
                 android:key="keyword"
